@@ -10,17 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // TODO 4: Create text box and connect it
+    // TODO 8: Create text box and connect it
     @IBOutlet weak var playButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO 1: Change buton color
+        
+        // TODO 2: Change label color
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToGameSegue" {
             let destVC = segue.destinationViewController as! BoardViewController
-            // TODO 5: Pass the variable
+            // TODO 9: Pass the variable
         }
     }
 }

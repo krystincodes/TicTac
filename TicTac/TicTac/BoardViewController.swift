@@ -40,14 +40,16 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
         switchTurns()
         
-        // TODO 1: Change player labels
+        // TODO 3: Change player labels
         
+        // TODO 4: Change X and O button colors
     }
     
     
     private func switchTurns() {
         isPlayersTurn = !isPlayersTurn
         if isPlayersTurn {
+            // TODO 5: Change player label colors
             playerOneLabel.textColor = UIColor.orangeColor()
             playerTwoLabel.textColor = UIColor.grayColor()
             xOrO = "X"
@@ -60,9 +62,9 @@ class BoardViewController: UIViewController {
     }
     
     private func winner() {
-        // TODO 2: edit label text
+        // TODO 6: edit label text
 
-        // TODO 3: hide board
+        // TODO 7: hide board
 
     }
     

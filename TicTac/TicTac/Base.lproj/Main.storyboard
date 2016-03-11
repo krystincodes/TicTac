@@ -182,144 +182,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-bL-mIF" userLabel="Grid View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-bL-mIF" userLabel="Board View">
                                 <rect key="frame" x="150" y="80" width="300" height="300"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwq-Ro-3qq">
-                                        <rect key="frame" x="0.0" y="100" width="300" height="5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="W3k-ck-CbU"/>
-                                            <constraint firstAttribute="height" constant="5" id="Y6k-02-VgT"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7h-5z-Gxz">
-                                        <rect key="frame" x="0.0" y="200" width="300" height="5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="XxZ-pD-hLR"/>
-                                            <constraint firstAttribute="width" constant="300" id="xf2-0T-yZJ"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD7-3m-7l9">
-                                        <rect key="frame" x="100" y="0.0" width="5" height="300"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="j2L-4i-SG0"/>
-                                            <constraint firstAttribute="width" constant="5" id="roj-Bz-QNK"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="493-bj-Jef">
-                                        <rect key="frame" x="200" y="0.0" width="5" height="300"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="5" id="Bki-Un-Tf5"/>
-                                            <constraint firstAttribute="height" constant="300" id="JE7-2h-yEu"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhq-Xf-xSc">
-                                        <rect key="frame" x="8" y="12" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonZeroClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="R46-ZL-xt4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPQ-Vi-PN9">
-                                        <rect key="frame" x="212" y="12" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonZeroTwoClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="gmu-Gb-zqa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-Vy-Cfm">
-                                        <rect key="frame" x="113" y="12" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonZeroOneClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="m70-UJ-iG4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-UC-uaw">
-                                        <rect key="frame" x="113" y="112" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonOneOneClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="DHS-dm-HHp"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnt-JC-RgM">
-                                        <rect key="frame" x="110" y="213" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTwoOneClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="Qxu-UJ-9gi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqe-Me-N6Y">
-                                        <rect key="frame" x="213" y="213" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTwoTwoClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="7Gf-9b-D5x"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-Hm-9kP">
-                                        <rect key="frame" x="212" y="113" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonOneTwoClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="Lcy-Ut-HFZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUH-9Q-yc7">
-                                        <rect key="frame" x="12" y="113" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonOneZeroClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="XdA-ln-33g"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8p-7T-HYu">
-                                        <rect key="frame" x="12" y="213" width="80" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="-">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTwoZeroClicked:" destination="Uvu-DQ-cwQ" eventType="touchUpInside" id="EUJ-bZ-UcL"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="oD7-3m-7l9" firstAttribute="top" secondItem="pjD-bL-mIF" secondAttribute="top" id="6PS-ob-Pht"/>
-                                    <constraint firstAttribute="trailing" secondItem="493-bj-Jef" secondAttribute="trailing" constant="95" id="8cP-cc-Kwq"/>
-                                    <constraint firstAttribute="bottom" secondItem="T7h-5z-Gxz" secondAttribute="bottom" constant="95" id="ARb-b5-WKZ"/>
-                                    <constraint firstItem="oD7-3m-7l9" firstAttribute="leading" secondItem="pjD-bL-mIF" secondAttribute="leading" constant="100" id="DcT-0r-PMg"/>
                                     <constraint firstAttribute="height" constant="300" id="PDR-Ik-lDO"/>
-                                    <constraint firstItem="Gwq-Ro-3qq" firstAttribute="centerX" secondItem="pjD-bL-mIF" secondAttribute="centerX" id="Q1I-Y0-Ixe"/>
-                                    <constraint firstItem="T7h-5z-Gxz" firstAttribute="centerX" secondItem="pjD-bL-mIF" secondAttribute="centerX" id="QqB-Q6-9rj"/>
-                                    <constraint firstItem="493-bj-Jef" firstAttribute="top" secondItem="pjD-bL-mIF" secondAttribute="top" id="fnd-pC-4HF"/>
                                     <constraint firstAttribute="width" constant="300" id="olq-60-s33"/>
-                                    <constraint firstItem="Gwq-Ro-3qq" firstAttribute="top" secondItem="pjD-bL-mIF" secondAttribute="top" constant="100" id="yCA-Se-4bx"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o28-Fy-WU6">
@@ -381,15 +249,6 @@
                     </view>
                     <connections>
                         <outlet property="boardView" destination="pjD-bL-mIF" id="9hm-Kc-oa3"/>
-                        <outlet property="buttonOneOne" destination="q1Z-UC-uaw" id="nJR-eO-6hL"/>
-                        <outlet property="buttonOneTwo" destination="FH5-Hm-9kP" id="iJS-MC-Yf5"/>
-                        <outlet property="buttonOneZero" destination="eUH-9Q-yc7" id="lcq-WC-kxL"/>
-                        <outlet property="buttonTwoOne" destination="vnt-JC-RgM" id="ZGr-wN-WEr"/>
-                        <outlet property="buttonTwoTwo" destination="Dqe-Me-N6Y" id="rYa-x6-oYY"/>
-                        <outlet property="buttonTwoZero" destination="u8p-7T-HYu" id="mF6-jx-gol"/>
-                        <outlet property="buttonZero" destination="Zhq-Xf-xSc" id="Nrw-OY-tVt"/>
-                        <outlet property="buttonZeroOne" destination="jTC-Vy-Cfm" id="5Ey-qa-7gR"/>
-                        <outlet property="buttonZeroTwo" destination="ZPQ-Vi-PN9" id="8gH-N0-YKG"/>
                         <outlet property="playerOneLabel" destination="o28-Fy-WU6" id="WRF-ef-7ji"/>
                         <outlet property="playerTwoLabel" destination="BwC-P4-lPn" id="zzF-hj-IyF"/>
                         <outlet property="winnerLabel" destination="wdM-H1-nRN" id="1Me-Pm-j7R"/>

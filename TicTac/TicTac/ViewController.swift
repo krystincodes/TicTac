@@ -19,21 +19,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        segmentedControl.selectedSegmentIndex = 0
-        playerTwoTextField.hidden = true
-        playerTwoTextField.alpha = 0
+        segmentedControl.selectedSegmentIndex = 1
+        computerLabel.hidden = true
+        computerLabel.alpha = 0
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToGameSegue" {
             let destVC = segue.destinationViewController as! BoardViewController
             destVC.playerOneName = playerOneTextField.text
-            if segmentedControl.selectedSegmentIndex == 0 {
-                destVC.isPlayingComputer = true
-            } else {
-                destVC.isPlayingComputer = false
-                destVC.playerTwoName = playerTwoTextField.text
-            }
+            destVC.playerTwoName = playerTwoTextField.text
         }
     }
     

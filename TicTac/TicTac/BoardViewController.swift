@@ -25,6 +25,10 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var winnerLabel: UILabel!
     
     var isPlayersTurn: Bool = true
+    var playerOneName: String?
+    var playerTwoName: String?
+    var isPlayingComputer: Bool = true
+    
     var xOrO = ""
     var zeroZero = ""
     var zeroOne = ""
@@ -40,9 +44,12 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
         switchTurns()
         
-        // TODO 3: Change player labels
-        
-        // TODO 4: Change X and O button colors
+        playerOneLabel.text = playerOneName
+        if isPlayingComputer {
+            playerTwoLabel.text = "Computer"
+        } else {
+            playerTwoLabel.text = playerTwoName
+        }
     }
     
     
@@ -50,22 +57,31 @@ class BoardViewController: UIViewController {
         isPlayersTurn = !isPlayersTurn
         if isPlayersTurn {
             // TODO 5: Change player label colors
-            playerOneLabel.textColor = UIColor.orangeColor()
-            playerTwoLabel.textColor = UIColor.grayColor()
+            playerOneLabel.textColor = UIColor(netHex:0x27ae60)
+            playerTwoLabel.textColor = UIColor(netHex:0x2c3e50)
             xOrO = "X"
         }
         else {
-            playerTwoLabel.textColor = UIColor.orangeColor()
-            playerOneLabel.textColor = UIColor.grayColor()
+            playerTwoLabel.textColor = UIColor(netHex:0x27ae60)
+            playerOneLabel.textColor = UIColor(netHex:0x2c3e50)
             xOrO = "O"
         }
     }
     
     private func winner() {
-        // TODO 6: edit label text
+        var whoWon = ""
+        if isPlayingComputer {
+            whoWon = isPlayersTurn ? playerOneName! : "Computer"
+        } else {
+            whoWon = isPlayersTurn ? playerOneName! : playerTwoName!
+        }
+        
+        winnerLabel.text = "\(whoWon) wins!"
 
-        // TODO 7: hide board
-
+        UIView.animateWithDuration(0.3) {
+            self.boardView.alpha = 0
+            self.boardView.hidden = true
+        }
     }
     
     

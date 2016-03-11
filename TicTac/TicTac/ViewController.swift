@@ -12,19 +12,51 @@ class ViewController: UIViewController {
 
     // TODO 8: Create text box and connect it
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var playerOneTextField: UITextField!
+    @IBOutlet weak var computerLabel: UILabel!
+    @IBOutlet weak var playerTwoTextField: UITextField!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO 1: Change buton color
-        
-        // TODO 2: Change label color
+        segmentedControl.selectedSegmentIndex = 0
+        playerTwoTextField.hidden = true
+        playerTwoTextField.alpha = 0
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToGameSegue" {
             let destVC = segue.destinationViewController as! BoardViewController
-            // TODO 9: Pass the variable
+            destVC.playerOneName = playerOneTextField.text
+            if segmentedControl.selectedSegmentIndex == 0 {
+                destVC.isPlayingComputer = true
+            } else {
+                destVC.isPlayingComputer = false
+                destVC.playerTwoName = playerTwoTextField.text
+            }
         }
+    }
+    
+    @IBAction func segmentedControlChanged(sender: AnyObject) {
+        let control = sender as! UISegmentedControl
+        
+        UIView.animateWithDuration(0.3, animations: {
+            if control.selectedSegmentIndex == 0 {
+                self.playerTwoTextField.alpha = 0
+                self.playerTwoTextField.hidden = true
+            } else {
+                self.computerLabel.alpha = 0
+                self.computerLabel.hidden = true
+            }
+            }, completion: { _ in
+                if control.selectedSegmentIndex == 0 {
+                    self.computerLabel.hidden = false
+                    self.computerLabel.alpha = 1
+                } else {
+                    self.playerTwoTextField.hidden = false
+                    self.playerTwoTextField.alpha = 1
+                }
+        })
     }
 }
 

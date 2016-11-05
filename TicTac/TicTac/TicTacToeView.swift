@@ -32,82 +32,82 @@ class TicTacToeView: UIView {
     var xOrO = ""
     
     // First row of buttons
-    @IBAction func buttonZeroClicked(sender: AnyObject) {
-        buttonZeroZero.enabled = false
-        buttonZeroZero.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonZeroClicked(_ sender: AnyObject) {
+        buttonZeroZero.isEnabled = false
+        buttonZeroZero.setTitle(xOrO, for: UIControlState())
         zeroZero = xOrO
         checkZeroZero()
     }
     
-    @IBAction func buttonZeroOneClicked(sender: AnyObject) {
-        buttonZeroOne.enabled = false
-        buttonZeroOne.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonZeroOneClicked(_ sender: AnyObject) {
+        buttonZeroOne.isEnabled = false
+        buttonZeroOne.setTitle(xOrO, for: UIControlState())
         zeroOne = xOrO
         checkZeroOne()
     }
     
-    @IBAction func buttonZeroTwoClicked(sender: AnyObject) {
-        buttonZeroTwo.enabled = false
-        buttonZeroTwo.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonZeroTwoClicked(_ sender: AnyObject) {
+        buttonZeroTwo.isEnabled = false
+        buttonZeroTwo.setTitle(xOrO, for: UIControlState())
         zeroTwo = xOrO
         checkZeroTwo()
     }
     
     // Second row of buttons
-    @IBAction func buttonOneZeroClicked(sender: AnyObject) {
-        buttonOneZero.enabled = false
-        buttonOneZero.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonOneZeroClicked(_ sender: AnyObject) {
+        buttonOneZero.isEnabled = false
+        buttonOneZero.setTitle(xOrO, for: UIControlState())
         oneZero = xOrO
         checkOneZero()
     }
     
-    @IBAction func buttonOneOneClicked(sender: AnyObject) {
-        buttonOneOne.enabled = false
-        buttonOneOne.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonOneOneClicked(_ sender: AnyObject) {
+        buttonOneOne.isEnabled = false
+        buttonOneOne.setTitle(xOrO, for: UIControlState())
         oneOne = xOrO
         checkOneOne()
     }
     
-    @IBAction func buttonOneTwoClicked(sender: AnyObject) {
-        buttonOneTwo.enabled = false
-        buttonOneTwo.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonOneTwoClicked(_ sender: AnyObject) {
+        buttonOneTwo.isEnabled = false
+        buttonOneTwo.setTitle(xOrO, for: UIControlState())
         oneTwo = xOrO
         checkOneTwo()
     }
     
     // Third row of buttons
-    @IBAction func buttonTwoZeroClicked(sender: AnyObject) {
-        buttonTwoZero.enabled = false
-        buttonTwoZero.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonTwoZeroClicked(_ sender: AnyObject) {
+        buttonTwoZero.isEnabled = false
+        buttonTwoZero.setTitle(xOrO, for: UIControlState())
         twoZero = xOrO
         checkTwoZero()
     }
     
-    @IBAction func buttonTwoOneClicked(sender: AnyObject) {
-        buttonTwoOne.enabled = false
-        buttonTwoOne.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonTwoOneClicked(_ sender: AnyObject) {
+        buttonTwoOne.isEnabled = false
+        buttonTwoOne.setTitle(xOrO, for: UIControlState())
         twoOne = xOrO
         checkTwoOne()
     }
     
-    @IBAction func buttonTwoTwoClicked(sender: AnyObject) {
-        buttonTwoTwo.enabled = false
-        buttonTwoTwo.setTitle(xOrO, forState: .Normal)
+    @IBAction func buttonTwoTwoClicked(_ sender: AnyObject) {
+        buttonTwoTwo.isEnabled = false
+        buttonTwoTwo.setTitle(xOrO, for: UIControlState())
         twoTwo = xOrO
         checkTwoTwo()
     }
     
     
-    private func winner() {
-        NSNotificationCenter.defaultCenter().postNotificationName("winner", object: nil)
+    fileprivate func winner() {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "winner"), object: nil)
     }
     
-    private func switchTurns() {
-        NSNotificationCenter.defaultCenter().postNotificationName("switchTurns", object: nil)
+    fileprivate func switchTurns() {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "switchTurns"), object: nil)
     }
     
     // MARK: Check winner functions
-    private func checkZeroZero() {
+    fileprivate func checkZeroZero() {
         // top row
         if zeroZero == zeroOne && zeroOne == zeroTwo {
             winner()
@@ -128,7 +128,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkZeroOne() {
+    fileprivate func checkZeroOne() {
         // top row
         if zeroZero == zeroOne && zeroOne == zeroTwo {
             winner()
@@ -143,7 +143,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkZeroTwo() {
+    fileprivate func checkZeroTwo() {
         // top row
         if zeroZero == zeroOne && zeroOne == zeroTwo {
             winner()
@@ -162,7 +162,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkOneZero() {
+    fileprivate func checkOneZero() {
         // left
         if zeroZero == oneZero && oneZero == twoZero {
             winner()
@@ -177,7 +177,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkOneOne() {
+    fileprivate func checkOneOne() {
         // second row
         if oneZero == oneOne && oneOne == oneTwo {
             winner()
@@ -202,7 +202,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkOneTwo() {
+    fileprivate func checkOneTwo() {
         // second row
         if oneZero == oneOne && oneOne == oneTwo {
             winner()
@@ -216,7 +216,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkTwoZero() {
+    fileprivate func checkTwoZero() {
         // left
         if zeroZero == oneZero && oneZero == twoZero {
             winner()
@@ -236,7 +236,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkTwoOne() {
+    fileprivate func checkTwoOne() {
         // bottom row
         if twoZero == twoOne && twoOne == twoTwo {
             winner()
@@ -251,7 +251,7 @@ class TicTacToeView: UIView {
         switchTurns()
     }
     
-    private func checkTwoTwo() {
+    fileprivate func checkTwoTwo() {
         // bottom row
         if twoZero == twoOne && twoOne == twoTwo {
             winner()

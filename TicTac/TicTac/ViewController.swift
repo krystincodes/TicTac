@@ -20,35 +20,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         segmentedControl.selectedSegmentIndex = 1
-        computerLabel.hidden = true
+        computerLabel.isHidden = true
         computerLabel.alpha = 0
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToGameSegue" {
-            let destVC = segue.destinationViewController as! BoardViewController
+            let destVC = segue.destination as! BoardViewController
+            // TODO: Send player names
             destVC.playerOneName = playerOneTextField.text
             destVC.playerTwoName = playerTwoTextField.text
         }
     }
     
-    @IBAction func segmentedControlChanged(sender: AnyObject) {
+    @IBAction func segmentedControlChanged(_ sender: AnyObject) {
         let control = sender as! UISegmentedControl
         
-        UIView.animateWithDuration(0.3, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             if control.selectedSegmentIndex == 0 {
                 self.playerTwoTextField.alpha = 0
-                self.playerTwoTextField.hidden = true
+                self.playerTwoTextField.isHidden = true
             } else {
                 self.computerLabel.alpha = 0
-                self.computerLabel.hidden = true
+                self.computerLabel.isHidden = true
             }
             }, completion: { _ in
                 if control.selectedSegmentIndex == 0 {
-                    self.computerLabel.hidden = false
+                    self.computerLabel.isHidden = false
                     self.computerLabel.alpha = 1
                 } else {
-                    self.playerTwoTextField.hidden = false
+                    self.playerTwoTextField.isHidden = false
                     self.playerTwoTextField.alpha = 1
                 }
         })

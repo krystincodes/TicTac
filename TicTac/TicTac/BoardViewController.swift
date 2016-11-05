@@ -24,12 +24,12 @@ class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ticTacToeNib = UINib(nibName: "TicTacToeView", bundle: NSBundle.mainBundle())
-        ticTacToeView = ticTacToeNib.instantiateWithOwner(self, options: nil).first as! TicTacToeView
+        let ticTacToeNib = UINib(nibName: "TicTacToeView", bundle: Bundle.main)
+        ticTacToeView = ticTacToeNib.instantiate(withOwner: self, options: nil).first as! TicTacToeView
         boardView.addSubview(ticTacToeView)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "winner:", name:"winner", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "switchTurns:", name:"switchTurns", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BoardViewController.winner(_:)), name:NSNotification.Name(rawValue: "winner"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BoardViewController.switchTurns(_:)), name:NSNotification.Name(rawValue: "switchTurns"), object: nil)
         
         isPlayersTurn = true
         playerOneLabel.textColor = UIColor(netHex:0x27ae60)
@@ -44,7 +44,7 @@ class BoardViewController: UIViewController {
         }
     }
     
-    func switchTurns(notification: NSNotification) {
+    func switchTurns(_ notification: Notification) {
         isPlayersTurn = !isPlayersTurn
         if isPlayersTurn {
             playerOneLabel.textColor = UIColor(netHex:0x27ae60)
@@ -58,7 +58,7 @@ class BoardViewController: UIViewController {
         }
     }
     
-    func winner(notification: NSNotification) {
+    func winner(_ notification: Notification) {
         var whoWon = ""
         if isPlayingComputer {
             whoWon = isPlayersTurn ? playerOneName! : "Computer"
@@ -68,9 +68,9 @@ class BoardViewController: UIViewController {
         
         winnerLabel.text = "\(whoWon) wins!"
 
-        UIView.animateWithDuration(0.3) {
+        UIView.animate(withDuration: 0.3, animations: {
             self.boardView.alpha = 0
-            self.boardView.hidden = true
-        }
+            self.boardView.isHidden = true
+        }) 
     }
 }

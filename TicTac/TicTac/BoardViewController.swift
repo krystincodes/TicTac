@@ -16,8 +16,8 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var winnerLabel: UILabel!
     
     var isPlayersTurn: Bool = false
-    var playerOneName: String?
-    var playerTwoName: String?
+    var playerOneName: String = "Player One"
+    var playerTwoName: String = "Player Two"
     var isPlayingComputer: Bool = false
     var ticTacToeView: TicTacToeView!
     
@@ -62,12 +62,12 @@ class BoardViewController: UIViewController {
     func winner(_ notification: Notification) {
         var whoWon = ""
         if isPlayingComputer {
-            whoWon = isPlayersTurn ? playerOneName! : "Computer"
+            whoWon = isPlayersTurn ? playerOneName : "Computer"
         } else {
-            whoWon = isPlayersTurn ? playerOneName! : playerTwoName!
+            whoWon = isPlayersTurn ? playerOneName : playerTwoName
         }
         
-        // TODO: Fix winner label text
+        // TODO 9: Fix winner label text
 
         UIView.animate(withDuration: 0.3, animations: {
             self.boardView.alpha = 0

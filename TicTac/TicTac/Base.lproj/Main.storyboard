@@ -82,7 +82,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-jQ-Orj">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-jQ-Orj">
                                 <rect key="frame" x="108.5" y="235" width="158" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="158" id="3Db-1d-CsV"/>
@@ -106,17 +106,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-5n-Hh3">
-                                <rect key="frame" x="112" y="299" width="151" height="29"/>
-                                <segments>
-                                    <segment title="Computer"/>
-                                    <segment title="Human"/>
-                                </segments>
-                                <color key="tintColor" red="0.90861177444458008" green="0.0" blue="0.14200912415981293" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="segmentedControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="iqw-HS-E1M"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -125,13 +114,11 @@
                             <constraint firstItem="Bka-jQ-Orj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Gp-qD-En6"/>
                             <constraint firstItem="Bka-jQ-Orj" firstAttribute="top" secondItem="epa-Hx-5tD" secondAttribute="bottom" constant="35" id="5xl-0h-uvI"/>
                             <constraint firstItem="SJa-ay-jHa" firstAttribute="top" secondItem="F74-p2-mzo" secondAttribute="bottom" constant="12" id="8r2-G2-qDC"/>
-                            <constraint firstItem="Ggr-5n-Hh3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cbl-TE-YUc"/>
                             <constraint firstItem="SJa-ay-jHa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EJf-w4-N46"/>
                             <constraint firstItem="epa-Hx-5tD" firstAttribute="top" secondItem="YNz-p2-AjZ" secondAttribute="bottom" constant="18" id="GZy-yj-zua"/>
                             <constraint firstItem="F74-p2-mzo" firstAttribute="top" secondItem="epa-Hx-5tD" secondAttribute="bottom" constant="7" id="KFF-Pa-p8b"/>
                             <constraint firstItem="epa-Hx-5tD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KfV-B9-49K"/>
                             <constraint firstItem="Bka-jQ-Orj" firstAttribute="top" secondItem="F74-p2-mzo" secondAttribute="bottom" constant="7" id="Li9-kB-PSa"/>
-                            <constraint firstItem="Ggr-5n-Hh3" firstAttribute="top" secondItem="YNz-p2-AjZ" secondAttribute="bottom" constant="147" id="Zuk-5l-8or"/>
                             <constraint firstItem="YNz-p2-AjZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="bhy-su-RQ8"/>
                             <constraint firstItem="cUT-QX-aHp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mLG-ci-4rh"/>
                             <constraint firstItem="F74-p2-mzo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="myA-kV-LRh"/>
@@ -156,8 +143,6 @@
                         <outlet property="computerLabel" destination="SJa-ay-jHa" id="ktK-Jc-LdF"/>
                         <outlet property="playButton" destination="cUT-QX-aHp" id="Eeu-ke-xhd"/>
                         <outlet property="playerOneTextField" destination="epa-Hx-5tD" id="kd8-zg-rP0"/>
-                        <outlet property="playerTwoTextField" destination="Bka-jQ-Orj" id="yrK-8d-dXf"/>
-                        <outlet property="segmentedControl" destination="Ggr-5n-Hh3" id="tee-L2-pG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

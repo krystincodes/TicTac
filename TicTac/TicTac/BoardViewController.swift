@@ -32,21 +32,22 @@ class BoardViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(BoardViewController.switchTurns(_:)), name:NSNotification.Name(rawValue: "switchTurns"), object: nil)
         
         isPlayersTurn = true
-        playerOneLabel.textColor = UIColor(netHex:0x27ae60)
-        playerTwoLabel.textColor = UIColor(netHex:0x2c3e50)
         ticTacToeView.xOrO = "X"
         
+        // TODO 4: Change label colors
+        playerOneLabel.textColor = UIColor(netHex:0x27ae60)
+        playerTwoLabel.textColor = UIColor(netHex:0x2c3e50)
+        
         playerOneLabel.text = playerOneName
-        if isPlayingComputer {
-            playerTwoLabel.text = "Computer"
-        } else {
-            playerTwoLabel.text = playerTwoName
-        }
+        playerTwoLabel.text = "Computer"
+        // TODO 8: Update player two name text
     }
     
     func switchTurns(_ notification: Notification) {
         isPlayersTurn = !isPlayersTurn
         if isPlayersTurn {
+            // TODO 5: Update text colors here
+            // TODO 6: How could we have made that easier?
             playerOneLabel.textColor = UIColor(netHex:0x27ae60)
             playerTwoLabel.textColor = UIColor(netHex:0x2c3e50)
             ticTacToeView.xOrO = "X"
@@ -66,7 +67,7 @@ class BoardViewController: UIViewController {
             whoWon = isPlayersTurn ? playerOneName! : playerTwoName!
         }
         
-        winnerLabel.text = "\(whoWon) wins!"
+        // TODO: Fix winner label text
 
         UIView.animate(withDuration: 0.3, animations: {
             self.boardView.alpha = 0

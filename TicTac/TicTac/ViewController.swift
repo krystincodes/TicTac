@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // TODO 8: Create text box and connect it
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var playerOneTextField: UITextField!
     @IBOutlet weak var computerLabel: UILabel!
@@ -19,19 +18,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO 3: Add option for playing against another person
         segmentedControl.selectedSegmentIndex = 1
         computerLabel.isHidden = true
         computerLabel.alpha = 0
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGameSegue" {
-            let destVC = segue.destination as! BoardViewController
-            // TODO: Send player names
-            destVC.playerOneName = playerOneTextField.text
-            destVC.playerTwoName = playerTwoTextField.text
-        }
-    }
+    // TODO 1: Add some custom color
+    
+    
+    
+    // TODO 2: Fix broken navigation
+
+    
+    
+    // TODO 7: Pass name variables to next screen
     
     @IBAction func segmentedControlChanged(_ sender: AnyObject) {
         let control = sender as! UISegmentedControl

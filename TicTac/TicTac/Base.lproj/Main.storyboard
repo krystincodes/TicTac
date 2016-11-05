@@ -57,9 +57,6 @@
                                         <exclude reference="fhS-T7-6Tm"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="Uvu-DQ-cwQ" kind="show" identifier="goToGameSegue" id="VAf-TB-om4"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNz-p2-AjZ">
                                 <rect key="frame" x="135.5" y="104" width="104" height="48"/>

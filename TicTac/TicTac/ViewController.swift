@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // TODO EXTRA: Hide keyboard if user taps background
+    
+    
     // TODO 2: Add some custom color
     
     
